@@ -129,13 +129,17 @@ public class Main {
          **/
 
         Map<String, Integer> math = new HashMap<>();
-        math.put("Marika", 5);
+        math.put("Mary", 5);
+        math.put("Chloe", 2);
         Map<String, Integer> history = new HashMap<>();
-        history.put("Marika", 4);
+        history.put("Mary", 4);
+        history.put("Chloe", 4);
         Map<String, Integer> literature = new HashMap<>();
-        literature.put("Marika", 3);
+        literature.put("Mary", 3);
+        literature.put("Chloe", 5);
         Map<String, Integer> chimistry = new HashMap<>();
-        chimistry.put("Marika", 5);
+        chimistry.put("Mary", 5);
+        chimistry.put("Chloe", 1);
 
         Map<String, Map<String, Integer>> semesterGrades = new HashMap<>();
         semesterGrades.put("Math", math);
