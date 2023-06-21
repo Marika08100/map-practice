@@ -146,18 +146,17 @@ public class Main {
         Map<String, Integer> literature = new HashMap<>();
         literature.put("Mary", 3);
         literature.put("Chloe", 5);
-        Map<String, Integer> chimistry = new HashMap<>();
-        chimistry.put("Mary", 5);
-        chimistry.put("Chloe", 1);
+        Map<String, Integer> chemistry = new HashMap<>();
+        chemistry.put("Mary", 5);
+        chemistry.put("Chloe", 1);
 
         Map<String, Map<String, Integer>> semesterGrades = new HashMap<>();
         semesterGrades.put("Math", math);
         semesterGrades.put("History", history);
         semesterGrades.put("Literature", literature);
-        semesterGrades.put("Chemistry", chimistry);
+        semesterGrades.put("Chemistry", chemistry);
 
         for (String subject : semesterGrades.keySet()) {
-            System.out.println("Subject: " + subject);
             Map<String, Integer> studentGrades = semesterGrades.get(subject);
             for (String student : studentGrades.keySet()) {
                 int grade = studentGrades.get(student);
