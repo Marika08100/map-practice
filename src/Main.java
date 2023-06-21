@@ -86,16 +86,25 @@ public class Main {
         }
         // TODO Írd ki, ki a legalacsonyabb!
         int min = Integer.MAX_VALUE;
-        for (int minHeight : heightMap.values()) {
-            if (minHeight < min) {
-                min = minHeight;
+//        for (int minHeight : heightMap.values()) {
+//            if (minHeight < min) {
+//                min = minHeight;
+//            }
+//        }
+//        for (Map.Entry<String, Integer> entry : heightMap.entrySet()) {
+//            if (entry.getValue() == min) {
+//                System.out.println("Legkisebb " + entry.getKey());
+//
+//            }
+        Map.Entry<String, Integer> minEntry = null;
+        for (var actual : heightMap.entrySet()) {
+            if (actual.getValue() < min) {
+                min = actual.getValue();
+                minEntry = actual;
             }
         }
-        for (Map.Entry<String, Integer> entry : heightMap.entrySet()) {
-            if (entry.getValue() == min) {
-                System.out.println("Legkisebb " + entry.getKey());
-            }
-        }
+        assert minEntry != null;
+        System.out.println(minEntry.getKey());
 
 
         // TODO Sziporka kiállt az esőbe és nőtt 1 centit: növeld meg a magasságát 1-gyel!
@@ -150,7 +159,7 @@ public class Main {
         for (String subject : semesterGrades.keySet()) {
             System.out.println("Subject: " + subject);
             Map<String, Integer> studentGrades = semesterGrades.get(subject);
-            for(String student : studentGrades.keySet()){
+            for (String student : studentGrades.keySet()) {
                 int grade = studentGrades.get(student);
                 System.out.println(student + ": " + grade);
             }
